@@ -1,0 +1,20 @@
+@import 'true';
+@import '../../src/grid/grid';
+
+@include test-module('grid(): base') {
+  @include test('should output base styles using fallback gutter') {
+    @include assert {
+      @include output {
+        @include grid-base();
+      }
+      @include expect {
+        .grid__item {
+          box-sizing: border-box;
+          vertical-align: top;
+          display: inline-block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

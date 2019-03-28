@@ -1,0 +1,40 @@
+@import 'true';
+@import '../../src/grid/grid';
+
+@include test-module('grid(): reverse') {
+  @include test('should output styles to visually reverse grid item order') {
+    @include assert {
+      @include output {
+        @include grid-reverse();
+      }
+      @include expect {
+        .grid--reverse {
+          direction: rtl;
+          text-align: right;
+        }
+        .grid--reverse > .grid__item {
+          direction: ltr;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  @include test('should output reverse grid with prefixed with modifiers') {
+    @include assert {
+      @include output {
+        @include grid-reverse('desktop');
+      }
+      @include expect {
+        .grid--desktop-reverse {
+          direction: rtl;
+          text-align: right;
+        }
+        .grid--desktop-reverse > .grid__item {
+          direction: ltr;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

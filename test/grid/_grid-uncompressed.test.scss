@@ -1,0 +1,20 @@
+@import 'true';
+@import '../../src/grid/grid';
+
+@include test-module('grid(): uncompressed') {
+  @include test('should output base styles when expecting uncompressed html') {
+    @include assert {
+      @include output {
+        @include grid-uncompressed();
+      }
+      @include expect {
+        .grid {
+          letter-spacing: -0.25em;
+        }
+        .grid__item {
+          letter-spacing: normal;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+# dependencies
+/node_modules
+
+# editor
+.vscode
+
+# development
+.prettierrc
+.prettierignore
+.stylintrc.json
+README.md
+
+# testing
+/test
+
+# misc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
