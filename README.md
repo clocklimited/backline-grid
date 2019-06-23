@@ -1,5 +1,7 @@
 # Backline Grid
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/clocklimited/backline-grid.svg)](https://greenkeeper.io/)
+
 A scss port of [responsive-grid](https://github.com/clocklimited/responsive-grid).
 
 A simple `inline-block` based responsive grid, with IE8+ browser support. Only outputs the styles specified to avoid CSS full of unused widths.
